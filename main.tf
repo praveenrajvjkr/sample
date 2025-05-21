@@ -1,8 +1,8 @@
-resource "aws_instance" "ec2vm" {
-  ami           = "ami-05b10e08d247fb927" 
-  instance_type = "t2.micro"
+resource "aws_s3_bucket" "S3Bucketcreation" {
+    bucket = "user15-test-bucket" #bucket name should not have special characters, No Caps. It should be unique
+
   tags = {
-    Name = "User15-Labexcerise"
-    env = "Dev"
+    Name        = "User15-S3_bucket"
+    Environment = "Dev"
   }
 }
